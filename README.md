@@ -46,3 +46,9 @@ Prevent requests without valid authentication headers.
 
 Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
 > !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+
+```
+http://image-filter-app-dev.us-east-1.elasticbeanstalk.com/
+
+http://image-filter-app-dev.us-east-1.elasticbeanstalk.com/api/filteredimage?image_url=https://d33v4339jhl8k0.cloudfront.net/docs/assets/5b25b50d2c7d3a0fa9a312a1/images/5b890a5c0428631d7a8a95a5/img-4084-1535707579-1558153957.png
+```
