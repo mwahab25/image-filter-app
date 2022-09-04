@@ -5,16 +5,16 @@ is a simple cloud application developed alongside the Udacity Cloud Engineering 
 ## Deployment image
 in folder deployment_screenshots
 
-# Repository URL
+## Repository URL
 https://github.com/mwahab25/image-filter-app.git
 
-### test local URL
+## test local URL
 http://localhost:8082/filteredimage?image_url=https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg
 
-### general elasticbeanstalk url
+## general elasticbeanstalk url
 http://image-filter-app-dev.us-east-1.elasticbeanstalk.com/
 
-### test elasticbeanstalk url
+## test elasticbeanstalk url
 
 http://image-filter-app-dev.us-east-1.elasticbeanstalk.com/api/filteredimage?image_url=https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg
 
