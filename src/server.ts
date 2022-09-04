@@ -1,6 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
+import axios from 'axios';
+import Jimp from 'jimp';
+
 
 (async () => {
 
@@ -29,12 +32,13 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   /**************************************************************************** */
 
-  app.get( "/api/filteredimage", async(req:express.Request, res:express.Response) => {
+  app.get( "/filteredimage", async(req:express.Request, res:express.Response) => {
     try
     {
-      let {image_url} = req.query;
+      const { image_url } = req.query as { image_url: string };
+
       if (!image_url){
-      res.status(400).send({message: 'URl is empty, try GET api/filteredimage?image_url={{}}'});
+      res.status(400).send({message: 'URl is empty, try GET /filteredimage?image_url={}'});
       } 
       else {
         await filterImageFromURL(image_url).then( function (filteredpath){
@@ -56,7 +60,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   // Root Endpoint
   // Displays a simple message to the user
   app.get( "/", async ( req, res ) => {
-    res.send("try GET api/filteredimage?image_url={{}}")
+    res.send("try GET /filteredimage?image_url={}")
   } );
   
 
